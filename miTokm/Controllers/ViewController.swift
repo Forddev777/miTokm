@@ -10,13 +10,12 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var Header_TItle: UILabel!
-    
+    @IBOutlet weak var BtnResult: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         Header_TItle.backgroundColor = .blue
         Header_TItle.textColor = .white
       
-        
       
         
     }

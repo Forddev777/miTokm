@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="UIMenu" message="Requires Xcode 11 or later." minToolsVersion="11.0" requiredIntegratedClassName="UICommandDiff"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -42,17 +43,50 @@
                                     <constraint firstAttribute="height" constant="34" id="BF3-Eh-p5J"/>
                                 </constraints>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z5e-f7-IoK">
+                                <rect key="frame" x="157.33333333333334" y="375" width="99.666666666666657" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Click Result"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" changesSelectionAsPrimaryAction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6aN-LY-JOM">
+                                <rect key="frame" x="100" y="287" width="86" height="30"/>
+                                <menu key="menu" title="Choose" id="fqE-No-nXp">
+                                    <children>
+                                        <command title="MI" id="UMo-dk-9La"/>
+                                        <command title="KM" id="845-8Z-FJb"/>
+                                    </children>
+                                </menu>
+                                <state key="normal" title="Choose"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" changesSelectionAsPrimaryAction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WfX-L5-7s3">
+                                <rect key="frame" x="228" y="287" width="86" height="30"/>
+                                <menu key="menu" title="Choose" id="AlI-v1-CZO">
+                                    <children>
+                                        <command title="MI" id="agh-ZH-9q1"/>
+                                        <command title="KM" id="7ve-6e-WiE"/>
+                                    </children>
+                                </menu>
+                                <state key="normal" title="Choose"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="YPc-2x-YCb" firstAttribute="top" secondItem="4it-YB-JPV" secondAttribute="bottom" constant="151.33000000000001" id="CrC-Es-S0O"/>
+                            <constraint firstItem="z5e-f7-IoK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EYm-es-G8d"/>
+                            <constraint firstItem="WfX-L5-7s3" firstAttribute="top" secondItem="YPc-2x-YCb" secondAttribute="bottom" constant="22" id="IuV-gx-vyw"/>
+                            <constraint firstItem="6aN-LY-JOM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="Lhf-PU-rrC"/>
                             <constraint firstItem="4it-YB-JPV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="53" id="XEo-Md-DDs"/>
                             <constraint firstItem="YPc-2x-YCb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cJY-qI-n8p"/>
+                            <constraint firstItem="z5e-f7-IoK" firstAttribute="top" secondItem="6aN-LY-JOM" secondAttribute="bottom" constant="58" id="dx4-nu-XNb"/>
                             <constraint firstItem="4it-YB-JPV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="exT-zu-FNI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WfX-L5-7s3" secondAttribute="trailing" constant="100" id="t9Z-C6-pPT"/>
+                            <constraint firstItem="6aN-LY-JOM" firstAttribute="top" secondItem="YPc-2x-YCb" secondAttribute="bottom" constant="22" id="v3W-jw-KhS"/>
+                            <constraint firstItem="WfX-L5-7s3" firstAttribute="leading" secondItem="6aN-LY-JOM" secondAttribute="trailing" constant="42" id="xhN-yK-221"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="BtnResult" destination="z5e-f7-IoK" id="V8W-H9-Kse"/>
                         <outlet property="Header_TItle" destination="4it-YB-JPV" id="0p4-Ir-hUf"/>
                     </connections>
                 </viewController>
