@@ -37,6 +37,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AA828BB22795B16300478396 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		AA828BB32795B16E00478396 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		AAAED4BC27906CAA00F0F818 = {
 			isa = PBXGroup;
 			children = (
@@ -56,6 +70,8 @@
 		AAAED4C727906CAA00F0F818 /* miTokm */ = {
 			isa = PBXGroup;
 			children = (
+				AA828BB32795B16E00478396 /* Model */,
+				AA828BB22795B16300478396 /* Views */,
 				AAAED4DC27906CBE00F0F818 /* Controllers */,
 				AAAED4C827906CAA00F0F818 /* AppDelegate.swift */,
 				AAAED4CA27906CAA00F0F818 /* SceneDelegate.swift */,

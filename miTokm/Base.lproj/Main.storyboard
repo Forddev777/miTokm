@@ -5,7 +5,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
-        <capability name="UIMenu" message="Requires Xcode 11 or later." minToolsVersion="11.0" requiredIntegratedClassName="UICommandDiff"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -17,78 +16,45 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pounds to Kilograms App" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4it-YB-JPV">
-                                <rect key="frame" x="53.666666666666657" y="52.999999999999993" width="307" height="26.666666666666664"/>
-                                <fontDescription key="fontDescription" name="ArialHebrew-Bold" family="Arial Hebrew" pointSize="25"/>
-                                <nil key="textColor"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AKq-Au-TCG">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Miles to Kilometer App" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vRn-zF-uzo">
+                                <rect key="frame" x="43" y="36" width="328" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleAspectFill" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="YPc-2x-YCb">
-                                <rect key="frame" x="100.00000000000001" y="231" width="214.33333333333337" height="34"/>
-                                <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Key Data " textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sBd-5N-5H1" userLabel="Key Data">
-                                        <rect key="frame" x="0.0" y="0.0" width="89.666666666666671" height="34"/>
-                                        <color key="backgroundColor" red="0.1745057398" green="1" blue="1" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
-                                    </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Key Data " textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hL0-bk-Rf9" userLabel="Key Data">
-                                        <rect key="frame" x="124.66666666666666" y="0.0" width="89.666666666666657" height="34"/>
-                                        <color key="backgroundColor" red="0.1745057398" green="1" blue="1" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
-                                    </textField>
-                                </subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Number" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oOP-b9-CRQ">
+                                <rect key="frame" x="167" y="116" width="80" height="34"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="34" id="BF3-Eh-p5J"/>
+                                    <constraint firstAttribute="height" constant="34" id="s08-bD-Yfm"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                            </textField>
+                            <stackView opaque="NO" contentMode="scaleAspectFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="P6m-jt-OEJ">
+                                <rect key="frame" x="174" y="296" width="67" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z5e-f7-IoK">
-                                <rect key="frame" x="157.33333333333334" y="375" width="99.666666666666657" height="31"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="tinted" title="Click Result"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" changesSelectionAsPrimaryAction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6aN-LY-JOM">
-                                <rect key="frame" x="100" y="287" width="86" height="30"/>
-                                <menu key="menu" title="Choose" id="fqE-No-nXp">
-                                    <children>
-                                        <command title="MI" id="UMo-dk-9La"/>
-                                        <command title="KM" id="845-8Z-FJb"/>
-                                    </children>
-                                </menu>
-                                <state key="normal" title="Choose"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" changesSelectionAsPrimaryAction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WfX-L5-7s3">
-                                <rect key="frame" x="228" y="287" width="86" height="30"/>
-                                <menu key="menu" title="Choose" id="AlI-v1-CZO">
-                                    <children>
-                                        <command title="MI" id="agh-ZH-9q1"/>
-                                        <command title="KM" id="7ve-6e-WiE"/>
-                                    </children>
-                                </menu>
-                                <state key="normal" title="Choose"/>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="YPc-2x-YCb" firstAttribute="top" secondItem="4it-YB-JPV" secondAttribute="bottom" constant="151.33000000000001" id="CrC-Es-S0O"/>
-                            <constraint firstItem="z5e-f7-IoK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EYm-es-G8d"/>
-                            <constraint firstItem="WfX-L5-7s3" firstAttribute="top" secondItem="YPc-2x-YCb" secondAttribute="bottom" constant="22" id="IuV-gx-vyw"/>
-                            <constraint firstItem="6aN-LY-JOM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="Lhf-PU-rrC"/>
-                            <constraint firstItem="4it-YB-JPV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="53" id="XEo-Md-DDs"/>
-                            <constraint firstItem="YPc-2x-YCb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cJY-qI-n8p"/>
-                            <constraint firstItem="z5e-f7-IoK" firstAttribute="top" secondItem="6aN-LY-JOM" secondAttribute="bottom" constant="58" id="dx4-nu-XNb"/>
-                            <constraint firstItem="4it-YB-JPV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="exT-zu-FNI"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WfX-L5-7s3" secondAttribute="trailing" constant="100" id="t9Z-C6-pPT"/>
-                            <constraint firstItem="6aN-LY-JOM" firstAttribute="top" secondItem="YPc-2x-YCb" secondAttribute="bottom" constant="22" id="v3W-jw-KhS"/>
-                            <constraint firstItem="WfX-L5-7s3" firstAttribute="leading" secondItem="6aN-LY-JOM" secondAttribute="trailing" constant="42" id="xhN-yK-221"/>
+                            <constraint firstItem="vRn-zF-uzo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="43" id="2I7-Bn-5rw"/>
+                            <constraint firstItem="oOP-b9-CRQ" firstAttribute="top" secondItem="vRn-zF-uzo" secondAttribute="bottom" constant="50" id="LN3-6b-VBq"/>
+                            <constraint firstItem="oOP-b9-CRQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Lxr-5G-nbT"/>
+                            <constraint firstItem="AKq-Au-TCG" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="UYP-mw-FPc"/>
+                            <constraint firstItem="AKq-Au-TCG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Xn8-ja-pbI"/>
+                            <constraint firstItem="vRn-zF-uzo" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="36" id="ajm-Rm-lF0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vRn-zF-uzo" secondAttribute="trailing" constant="43" id="auq-QV-nzJ"/>
+                            <constraint firstItem="AKq-Au-TCG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="faH-Un-Jk1"/>
+                            <constraint firstItem="AKq-Au-TCG" firstAttribute="centerX" secondItem="oOP-b9-CRQ" secondAttribute="centerX" id="lBH-gR-kHK"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="BtnResult" destination="z5e-f7-IoK" id="V8W-H9-Kse"/>
-                        <outlet property="Header_TItle" destination="4it-YB-JPV" id="0p4-Ir-hUf"/>
-                        <outlet property="numpad" destination="sBd-5N-5H1" id="n47-ak-9dj"/>
+                        <outlet property="Inputnum" destination="oOP-b9-CRQ" id="sKV-Uw-Qco"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
