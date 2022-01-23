@@ -38,13 +38,23 @@
                                 <rect key="frame" x="174" y="296" width="67" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </stackView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="O35-gk-pgd">
+                                <rect key="frame" x="191" y="234" width="32" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="tA7-tK-kxW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="vRn-zF-uzo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="43" id="2I7-Bn-5rw"/>
+                            <constraint firstItem="O35-gk-pgd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8v3-Hv-Gz9"/>
                             <constraint firstItem="oOP-b9-CRQ" firstAttribute="top" secondItem="vRn-zF-uzo" secondAttribute="bottom" constant="50" id="LN3-6b-VBq"/>
                             <constraint firstItem="oOP-b9-CRQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Lxr-5G-nbT"/>
+                            <constraint firstItem="O35-gk-pgd" firstAttribute="top" secondItem="oOP-b9-CRQ" secondAttribute="bottom" constant="84" id="Qtq-dl-nX5"/>
                             <constraint firstItem="AKq-Au-TCG" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="UYP-mw-FPc"/>
                             <constraint firstItem="AKq-Au-TCG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Xn8-ja-pbI"/>
                             <constraint firstItem="vRn-zF-uzo" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="36" id="ajm-Rm-lF0"/>
@@ -55,6 +65,7 @@
                     </view>
                     <connections>
                         <outlet property="Inputnum" destination="oOP-b9-CRQ" id="sKV-Uw-Qco"/>
+                        <outlet property="textcal" destination="O35-gk-pgd" id="0Kj-3U-6ck"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
