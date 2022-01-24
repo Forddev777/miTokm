@@ -13,12 +13,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var textcal: UITextField!
     @IBOutlet weak var ResultMileKm: UILabel!
     
-    let pickertext = ["Miles","Kilometer"]
-    
-
+    let pickertext = ["MI","KM"]
     var pickerView = UIPickerView()
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -26,7 +23,6 @@ class ViewController: UIViewController {
         pickerView.dataSource = self
         textcal.inputView = pickerView
         textcal.textAlignment = .center
-        
         
     let BtnBlue = UIButton(frame: CGRect(x: 0, y: 0, width: view.frame.size.width , height: 70))
         
@@ -39,8 +35,10 @@ class ViewController: UIViewController {
         // get data from text //
         Inputnum.inputAccessoryView = BtnBlue
         textcal.inputAccessoryView = BtnBlue
-        ResultMileKm.isHidden = false
-       
+        
+        //ResultMileKm.text =  textcal.text
+        
+        ResultMileKm.text = "AAAA"
     }
     
     @objc func calmileTokm() {
