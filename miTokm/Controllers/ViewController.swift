@@ -11,8 +11,11 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var Inputnum: UITextField!
     @IBOutlet weak var textcal: UITextField!
+    @IBOutlet weak var ResultMileKm: UILabel!
+    
     let pickertext = ["Miles","Kilometer"]
     
+
     var pickerView = UIPickerView()
 
     
@@ -23,9 +26,34 @@ class ViewController: UIViewController {
         pickerView.dataSource = self
         textcal.inputView = pickerView
         textcal.textAlignment = .center
+        
+        
+    let BtnBlue = UIButton(frame: CGRect(x: 0, y: 0, width: view.frame.size.width , height: 70))
+        
+        BtnBlue.backgroundColor = .blue
+        BtnBlue.setTitle("Cal", for: .normal )
+        BtnBlue.setTitleColor( .white , for: .normal)
+        BtnBlue.addTarget(self , action: #selector(ViewController.calmileTokm), for: .touchUpInside )
     
-    
+        
+        // get data from text //
+        Inputnum.inputAccessoryView = BtnBlue
+        textcal.inputAccessoryView = BtnBlue
+        ResultMileKm.isHidden = false
+       
     }
+    
+    @objc func calmileTokm() {
+        if let Inputnum = Inputnum.text , let textcal  = textcal.text {
+            if let calfunction = Double(Inputnum) , let _ = Double(textcal){
+                view.endEditing(true)
+                ResultMileKm.isHidden = false
+                ResultMileKm.text = "\(logic_cal.get_logic_cal(forInput: calfunction ))"
+            }
+        }
+            
+    }
+    
     
 }
 

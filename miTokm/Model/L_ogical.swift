@@ -10,6 +10,9 @@ import Foundation
 class logic_cal {
     
     
+    class func  get_logic_cal(forInput Inputnum:Double ) -> Int{
+        return  Int(Inputnum)
         
+    }
     
 }
